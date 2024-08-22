@@ -5,10 +5,10 @@ function MyHomeSection() {
     <main className="main-section">
       <section
         id="home"
-        className="widescreen:section-min-height tallscreen:screen:section-min-height mb-12 flex scroll-mt-40 flex-col-reverse  items-center justify-center mt-12 gap-8 p-6 md:flex-row"
+        className="widescreen:section-min-height tallscreen:screen:section-min-height mb-12 flex scroll-mt-40 flex-col-reverse  items-center justify-center mt-12 gap-8 p-6 md:flex-row "
       >
-        <article className="md:w-1/3">
-          <h2 className="md:text-5xl md:text-left md:mb-0 mb-5 max-w-md text-center text-5xl font-bold text-stone-900 dark:text-white ">
+        <article className="md:w-2/5 ">
+          <h2 className="md:text-7xl md:text-left  mb-5 md:mb-10  md:w-xl text-center text-5xl font-bold text-stone-900 dark:text-white ">
             Nguyễn Hữu Lộc
           </h2>
           <h2 className=" max-w-md text-left text-4xl font-bold text-stone-900 dark:text-white ">
