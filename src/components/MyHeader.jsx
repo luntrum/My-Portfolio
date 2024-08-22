@@ -1,21 +1,38 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 function MyHeader() {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
   const [isToggleBurger, setIsToggleBurger] = useState(false);
+  const [isHiddenMenu, setIsHiddenMenu] = useState(true);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 768) {
+        setIsOpenMenu(false);
+        setIsToggleBurger(false);
+        setTimeout(() => {
+          setIsHiddenMenu(false);
+        }, 1500);
+      } else {
+        setIsHiddenMenu(true);
+      }
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
   const handleMobileMenu = () => {
     setIsToggleBurger(!isToggleBurger);
     setIsOpenMenu(!isOpenMenu);
   };
 
   return (
-    <header className="sticky top-0 z-10 bg-emerald-700 ">
+    <header className="sticky top-0 z-10 bg-emerald-500 ">
       <section className="mx-auto flex max-w-4xl items-center justify-between p-4">
         {/* Name and logo  */}
         <h1 className="text-3xl text-black">
           <a href="#home" className="flex items-center ">
             <img
-              src="public\favicon-32x32.png"
+              src="../favicon-32x32.png"
               alt="my logo"
               className="mx-3 w-12"
             />
@@ -31,7 +48,7 @@ function MyHeader() {
           <div
             className={`absolute top-4 -mt-0.5 h-1 w-8 rounded bg-black transition-all duration-500  ${
               isToggleBurger
-                ? `bg-transparent before:absolute before:h-1 before:w-8 before:-translate-x-4  before:rounded before:bg-black before:rotate-360
+                ? `bg-transparent before:absolute before:h-1 before:w-8 before:-translate-x-4  before:rounded before:bg-black 
                 before:transition-all before:duration-500 before:rotate-45 before:content-[''] after:absolute after:h-1 after:w-8 
                 after:transition-all after:duration-500 after:-translate-x-4  after:rounded after:bg-black after:-rotate-45 after:content-[''] rotate-[1800deg]  `
                 : `before:absolute before:h-1 before:w-8 before:-translate-x-4 before:translate-y-3 before:rounded before:bg-black before:transition-all before:duration-500 before:content-[''] after:absolute after:h-1 after:w-8 after:-translate-x-4 after:-translate-y-3 after:rounded after:bg-black after:content-['']`
@@ -53,9 +70,11 @@ function MyHeader() {
         </nav>
         {/* mobile menu */}
         <section
-          className={`top-20 left-0 right-5 justify-center absolute text-white   w-full origin-top animate-open-menu flex-col bg-slate-800 text-5xl ${
-            isOpenMenu ? 'flex' : 'hidden'
-          } md:hidden`}
+          className={`top-20 left-0 right-5 text-5xl justify-center absolute text-white   w-full origin-top  flex-col bg-slate-600 ${
+            isHiddenMenu ? 'opacity-0 invisible' : 'opacity-100 visible'
+          }   md:hidden  ${
+            !isOpenMenu ? 'animate-close-menu' : 'animate-open-menu '
+          } flex   `}
         >
           <nav
             className="flex min-h-screen flex-col items-center py-8"

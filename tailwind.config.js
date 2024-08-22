@@ -13,9 +13,14 @@ export default {
           '80%': { transform: 'scaleY(1.2)' },
           '100%': { transform: 'scaleY(1)' },
         },
+        'close-menu': {
+          '0%': { transform: 'scaleY(1)' },
+          '100%': { transform: 'scaleY(0)' },
+        },
       },
       animation: {
         'open-menu': 'open-menu 0.5s ease-in-out forwards',
+        'close-menu': 'close-menu 0.4s ease-in-out forwards',
       },
     },
   },
