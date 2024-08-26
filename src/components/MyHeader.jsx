@@ -37,7 +37,7 @@ function MyHeader() {
               alt="my logo"
               className="mx-3 w-12"
             />
-            Kelvin Nguyen
+            Loc Nguyen
           </a>
         </h1>
         {/* hamburger button */}
