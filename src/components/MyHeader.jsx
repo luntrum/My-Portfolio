@@ -28,16 +28,16 @@ function MyHeader() {
 
   return (
     <header className="sticky top-0 z-10 bg-emerald-500  ">
-      <section className="mx-auto w-3/4 py-10 md:py-12  md:text-2xl xl:text-4xl flex items-center justify-between ">
+      <section className="mx-auto w-3/4 py-4  md:text-2xl xl:text-4xl flex items-center justify-between ">
         {/* Name and logo  */}
-        <h1 className="text-3xl text-black md:text-4xl">
+        <h1 className="text-3xl text-black ">
           <a href="#home" className="flex items-center ">
             <img
               src="../favicon-32x32.png"
               alt="my logo"
               className="mx-3 w-12"
             />
-            Loc Nguyen
+            Kelvin Nguyen
           </a>
         </h1>
         {/* hamburger button */}
@@ -58,35 +58,25 @@ function MyHeader() {
         </button>
 
         {/* <!-- navbar --> */}
-        <nav className="hidden space-x-8 text-xl md:block md:text-2xl xl:text-4xl ">
-          <a
-            href="#myKnowlegde"
-            className="hover:opacity-60 hover:bg-emerald-800 py-12 "
-          >
+        <nav className="hidden space-x-8 text-xl md:block ">
+          <a href="#myKnowlegde" className="hover:opacity-60 md:text-xl ">
             My Knowlegde
           </a>
-          <a
-            href="#myHobby"
-            className="hover:opacity-60 hover:bg-emerald-800 py-12 "
-          >
-            My Hobby
-          </a>
-          <a
-            href="#myProject"
-            className="hover:opacity-60 hover:bg-emerald-800 py-12 "
-          >
+
+          <a href="#myProject" className="hover:opacity-60 md:text-xl ">
             My Project
           </a>
-          <a
-            href="#contact"
-            className="hover:opacity-60 hover:bg-emerald-800 py-12 "
-          >
+          <a href="#myHobby" className="hover:opacity-60 md:text-xl ">
+            My Hobby
+          </a>
+
+          <a href="#contact" className="hover:opacity-60 md:text-xl ">
             Contact Me
           </a>
         </nav>
         {/* mobile menu */}
         <section
-          className={`top-32 left-0 right-5 text-5xl justify-center absolute text-white   w-full origin-top  flex-col bg-slate-600 ${
+          className={`top-20 left-0 right-5 text-5xl justify-center absolute text-white   w-full origin-top  flex-col bg-slate-600  ${
             isHiddenMenu ? 'opacity-0 invisible' : 'opacity-100 visible'
           }    ${
             !isOpenMenu ? 'animate-close-menu' : 'animate-open-menu '
@@ -111,18 +101,18 @@ function MyHeader() {
               My Knowlegde
             </a>
             <a
-              href="#myHobby"
-              className="py-6 w-full text-center hover:opacity-80"
-              onClick={handleMobileMenu}
-            >
-              My Hobby
-            </a>
-            <a
               href="#myProject"
               className="py-6 w-full text-center hover:opacity-80"
               onClick={handleMobileMenu}
             >
               My Project
+            </a>
+            <a
+              href="#myHobby"
+              className="py-6 w-full text-center hover:opacity-80"
+              onClick={handleMobileMenu}
+            >
+              My Hobby
             </a>
             <a
               href="#contact"

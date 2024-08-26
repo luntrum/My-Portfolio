@@ -3,11 +3,18 @@ import React, { useState, useMemo } from 'react';
 function MyHobby() {
   const [count, setCount] = useState(0);
   const handleCount = (value) => {
-    if (value === 'increase' && count < 3) {
+    if (value === 'increase') {
       setCount((preCount) => preCount + 1);
     }
-    if (value === 'decrease' && count > 0) {
+
+    if (value === 'decrease') {
       setCount((count) => count - 1);
+    }
+    if (count >= 3) {
+      setCount(0);
+    }
+    if (count < 0) {
+      setCount(2);
     }
   };
 
@@ -19,9 +26,11 @@ function MyHobby() {
             <img
               src="./img/travel.jpg"
               alt="travel"
-              className="w-full h-auto md:w-1/2 md:h-1/2 object-cover"
+              className="w-80 h-96 md:w-1/3 md:h-1/3 object-fill md:object-cover"
             />
-            <p className="text-5xl mt-8">Travel</p>
+            <p className="md:text-3xl text-xl md:mt-8 mt-2 whitespace-nowrap">
+              Travel
+            </p>
           </>
         );
       case 2:
@@ -30,9 +39,12 @@ function MyHobby() {
             <img
               src="./img/leonui.jpg"
               alt="travel"
-              className="w-full h-auto md:w-1/3 md:h-1/3 object-cover"
+              className="w-80 h-96 md:w-1/4 md:h-1/4 object-fill md:object-cover "
             />
-            <p className="text-5xl mt-8"> Mountain Climbing </p>
+            <p className="md:text-3xl text-xl md:mt-8 mt-2 whitespace-nowrap">
+              {' '}
+              Mountain Climbing{' '}
+            </p>
           </>
         );
       default:
@@ -40,11 +52,13 @@ function MyHobby() {
           <>
             <video
               src="./video/gapgau.mp4"
-              className="w-80 h-96 md:w-1/4 md:h-1/4"
+              className="w-80 h-96 md:w-1/4 md:h-1/4 "
               controls
             ></video>
 
-            <p className="text-3xl mt-8 mx-5">Playing Claw Machines</p>
+            <p className="md:text-3xl text-xl md:mt-8 mt-2 whitespace-nowrap">
+              Playing Claw Machines
+            </p>
           </>
         );
     }
@@ -52,10 +66,10 @@ function MyHobby() {
   return (
     <section
       id="myHobby"
-      className=" widescreen:section-min-height tallscreen:screen:section-min-height mb-12 flex scroll-mt-40 flex-col items-center justify-center mt-12 gap-8 p-6 "
+      className="  mb-20 flex  flex-col items-center justify-center mt-6  gap-8 p-6 scroll-mt-20  widescreen:section-min-height tallscreen:screen:section-min-height"
     >
-      <h3 className="dark:text-white mx-auto text-5xl ">MyHobby</h3>
-      <div className=" md:w-5/6 flex mt-20 align-middle items-center justify-between ">
+      <h3 className="dark:text-white mx-auto  text-5xl font-bold ">My Hobby</h3>
+      <div className=" md:w-5/6 flex  align-middle items-center justify-between ">
         <button
           id="decrease"
           value={'decrease'}
