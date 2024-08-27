@@ -26,25 +26,25 @@ function MyContact() {
           </div>
         </div>
 
-        <nav class="hidden flex-col gap-2 md:flex" aria-label="footer">
-          <a href="#home" class="hover:opacity-90">
+        <nav className="hidden flex-col gap-2 md:flex" aria-label="footer">
+          <a href="#home" className="hover:opacity-90">
             About me
           </a>
-          <a href="#myKnowlegde" class="hover:opacity-90">
+          <a href="#myKnowlegde" className="hover:opacity-90">
             My Knowlegde
           </a>
-          <a href="#myProject" class="hover:opacity-90">
+          <a href="#myProject" className="hover:opacity-90">
             My Project
           </a>
-          <a href="#myHobby" class="hover:opacity-90">
+          <a href="#myHobby" className="hover:opacity-90">
             My Hobby
           </a>
         </nav>
-        <div class="flex flex-col text-sm md:text-xl md:gap-2">
-          <p class="text-right">
+        <div className="flex flex-col text-sm md:text-xl md:gap-2">
+          <p className="text-right">
             Copyright &copy; <span id="year">2024</span>
           </p>
-          <p class="text-right">All Right Reserved</p>
+          <p className="text-right">All Right Reserved</p>
         </div>
       </section>
     </footer>

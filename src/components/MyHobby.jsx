@@ -66,7 +66,7 @@ function MyHobby() {
   return (
     <section
       id="myHobby"
-      className="  mb-20 flex  flex-col items-center justify-center mt-6  gap-8 p-6 scroll-mt-20  widescreen:section-min-height tallscreen:screen:section-min-height"
+      className=" mb-56 md:mb-32 flex  flex-col items-center justify-center mt-6  gap-8 p-6 scroll-mt-20  widescreen:section-min-height tallscreen:screen:section-min-height"
     >
       <h3 className="dark:text-white mx-auto  text-5xl font-bold ">My Hobby</h3>
       <div className=" md:w-5/6 flex  align-middle items-center justify-between ">
@@ -74,9 +74,9 @@ function MyHobby() {
           id="decrease"
           value={'decrease'}
           onClick={(e) => handleCount(e.currentTarget.getAttribute('value'))}
-          className="p-10 hover:bg-slate-500 rounded-xl mx-4 py-14"
+          className="p-2 md:p-10 hover:bg-slate-500 rounded-xl md:mx-4 py-5 md:py-14"
         >
-          <i className="fi fi-br-angle-left dark:text-white text-3xl md:text-5xl "></i>
+          <i className="fi fi-br-angle-left dark:text-white text-xl md:text-5xl "></i>
         </button>
 
         <article className="md:w-5/6 w-3/5 h-3/4 flex flex-col items-center justify-center md:justify-center ">
@@ -87,9 +87,9 @@ function MyHobby() {
           id="increase"
           value={'increase'}
           onClick={(e) => handleCount(e.currentTarget.getAttribute('value'))}
-          className="p-10 hover:bg-slate-500 rounded-xl mx-4 py-14"
+          className="p-2 md:p-10 hover:bg-slate-500 rounded-xl md:mx-4 py-5 md:py-14"
         >
-          <i className="fi fi-br-angle-right dark:text-white right-5 text-3xl md:text-5xl "></i>
+          <i className="fi fi-br-angle-right dark:text-white right-5 text-xl md:text-5xl "></i>
         </button>
       </div>
     </section>

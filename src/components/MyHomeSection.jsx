@@ -5,7 +5,7 @@ function MyHomeSection() {
     <main className="main-section">
       <section
         id="home"
-        className="   mb-12 flex  flex-col-reverse items-center justify-center gap-8 p-6 md:flex-row  scroll-mt-40 widescreen:section-min-height tallscreen:screen:section-min-height md:mb-52"
+        className="   mb-28 flex  flex-col-reverse items-center justify-center gap-8 p-6 md:flex-row  scroll-mt-40 widescreen:section-min-height tallscreen:screen:section-min-height md:mb-52"
       >
         <article className="md:w-2/5 ">
           <h2 className="md:text-7xl md:text-left  mb-5 md:mb-10  md:w-xl text-center text-5xl font-bold text-stone-900 dark:text-white ">
