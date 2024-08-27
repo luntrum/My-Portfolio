@@ -12,7 +12,7 @@ function MyHomeSection() {
             Nguyễn Hữu Lộc
           </h2>
           <h2 className=" max-w-md text-left text-4xl font-bold text-stone-900 dark:text-white ">
-            Date of Birth: 07/05/2001
+            Front-end Developer
           </h2>
           <br />
           <p className=" max-w-md text-left text-2xl  text-stone-900 dark:text-white">
