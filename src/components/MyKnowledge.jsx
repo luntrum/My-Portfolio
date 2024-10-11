@@ -4,7 +4,7 @@ function MyKnowledge() {
   return (
     <section
       id="myKnowlegde"
-      className="  mb-36 flex  flex-col items-center justify-center mt-6  gap-8 p-6 scroll-mt-20  widescreen:section-min-height tallscreen:screen:section-min-height"
+      className="  mb-36 md:mb-80 flex  flex-col items-center justify-center mt-6  gap-8 p-6 scroll-mt-20  widescreen:section-min-height tallscreen:screen:section-min-height"
     >
       <h2 className="text-5xl font-bold mb-6">My Knowledge</h2>
       <div className="mx-auto flex flex-col">
